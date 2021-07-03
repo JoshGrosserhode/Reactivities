@@ -1,6 +1,5 @@
 import React from 'react';
 import { Message } from 'semantic-ui-react';
-import TestErrors from './TestErrors';
 
 interface Props {
   errors: string[] | null;
