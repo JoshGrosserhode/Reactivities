@@ -72,7 +72,9 @@ namespace API.Controllers
             return CreateUserObject(user);
         }
 
-        return BadRequest("Problem registering user");
+        // return BadRequest("Problem registering user");
+        ModelState.AddModelError("badRequest", "Problem registering user");
+        return ValidationProblem();
     }
 
     [Authorize]
